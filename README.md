@@ -1,6 +1,6 @@
 # kubectl-docker
 ```
-volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/certs/client", "/cache"
+volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/certs/client", "/cache"]
 ```
 # Gitlab-Runner for Ubuntu
 ```
