@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.17
 ARG VCS_REF
 ARG BUILD_DATE
 # Note: Latest version of kubectl may be found at:
@@ -14,7 +14,7 @@ ARG DOCKER_CLI_VERSION="19.03.8"
 ARG ARGO_CLI_VERSION="3.2.3"
 
 
-RUN apk add --no-cache ca-certificates bash git openssh curl jq \
+RUN apk add --no-cache ca-certificates bash git openssh curl jq yq \
     && wget -q https://storage.googleapis.com/kubernetes-release/release/${KUBE_LATEST_VERSION}/bin/linux/amd64/kubectl -O /usr/local/bin/kubectl \
     && chmod +x /usr/local/bin/kubectl \
     && wget -q https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz -O - | tar -xzO linux-amd64/helm > /usr/local/bin/helm \
