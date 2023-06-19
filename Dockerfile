@@ -10,10 +10,7 @@ ENV HELM_VERSION="v3.2.1"
 # Note: Latest version of docker may be found at:
 # https://download.docker.com/linux/static/stable/x86_64/
 ARG DOCKER_CLI_VERSION="19.03.8"
-
 ARG ARGO_CLI_VERSION="3.2.3"
-
-
 RUN apk add --no-cache ca-certificates bash git openssh curl jq yq \
     && wget -q https://storage.googleapis.com/kubernetes-release/release/${KUBE_LATEST_VERSION}/bin/linux/amd64/kubectl -O /usr/local/bin/kubectl \
     && chmod +x /usr/local/bin/kubectl \
